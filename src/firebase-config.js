@@ -3,9 +3,9 @@
     import {getAuth,GoogleAuthProvider} from 'firebase/auth'; //used to add google authentication
     // import { getAnalytics } from "firebase/analytics";
     // https://firebase.google.com/docs/web/setup#available-libraries
+    import {getFirestore} from 'firebase/firestore';
 
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
     const firebaseConfig = {
     apiKey: "AIzaSyC0IXGPFBsfi7kJWUkkk2PcVGpb58wPlvU",
     authDomain: "chitchat-d5d1e.firebaseapp.com",
@@ -21,3 +21,4 @@
     const app = initializeApp(firebaseConfig);
     export const auth = getAuth(app);//it can be used to add authentication
     export const provider = new GoogleAuthProvider();//it can provide google sign in
+    export const db = getFirestore(app);

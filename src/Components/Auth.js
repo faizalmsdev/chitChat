@@ -1,7 +1,10 @@
 import {auth , provider} from '../firebase-config';
 import {signInWithPopup} from 'firebase/auth';//its for sign in popup
+import '../styles/Auth.css'
 
 import Cookies from 'universal-cookie' //to constantly have the login token id
+
+import dp from "../Components/images/dp.png"
 const cookies = new Cookies();
 
 export const Auth =(props) =>{
@@ -17,8 +20,15 @@ export const Auth =(props) =>{
     }
 }
 
-    return <div className="auth">
-        <p>Sign In With Google To Continue</p>
-        <button onClick={signInWithGoogle}>Sign In With Google</button>
-    </div>
+    return (
+        <div className="auth-container">
+            
+            <h1>Welcome to ChitChat</h1>
+            <p>Perfect Spot to Chat about gossips.</p>
+            <button onClick={signInWithGoogle} className="login-with-google-btn">
+                Sign In With Google
+            </button>
+            <img src={dp} alt="profile" id='dp'/>
+        </div>
+    )
 }

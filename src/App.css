@@ -1,6 +1,8 @@
 body {
   padding: 0;
   margin: 0;
+  background-image: url("./Components//images/bg.png");
+  overflow-x: hidden;
 }
 
 .App {
@@ -60,4 +62,139 @@ body {
 
 .sign-out {
   margin-top: 50px;
+}
+
+.login-with-google-btn {
+  transition: background-color .3s, box-shadow .3s;
+    
+  padding: 12px 16px 12px 42px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+  
+  color: #757575;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 12px 11px;
+  
+  &:hover {
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 2px 4px rgba(0, 0, 0, .25);
+  }
+  
+  &:active {
+    background-color: #eeeeee;
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: 
+      0 -1px 0 rgba(0, 0, 0, .04),
+      0 2px 4px rgba(0, 0, 0, .25),
+      0 0 0 3px #c8dafc;
+  }
+  
+  &:disabled {
+    filter: grayscale(100%);
+    background-color: #ebebeb;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+    cursor: not-allowed;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333; /* Dark gray text color */
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #666; /* Slightly lighter gray text color */
+}
+
+.auth-container{
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 320px;
+  background: #f2ebdd;
+  position: relative;
+  top: 25%;
+  padding-top: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  gap: 38px;
+  border-radius: 28px;
+  position: absolute;
+}
+
+.room{
+  height: 220px;
+  width: 320px;
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  margin-left: 33%;
+  background: radial-gradient(80.99% 100% at 50% 0%, #00FF0A 0%, #36008E 100%), radial-gradient(50% 123.47% at 50% 50%, #EFE7C8 0%, #36008E 100%), linear-gradient(301.28deg, #FF006B 0%, #48DD9E 100%), linear-gradient(294.84deg, #5A60E4 0%, #D30000 100%), linear-gradient(52.29deg, #000000 0%, #00FF85 100%), radial-gradient(100% 138.69% at 100% 0%, #0007A5 0%, #FF7A00 100%), radial-gradient(70.41% 100% at 50% 0%, #D5B300 0%, #2200AA 100%);
+  background-blend-mode: screen, screen, lighten, overlay, lighten, difference, normal;
+}
+
+.room label{
+  font-family:'Poppins', sans-serif ;
+  font-style :normal;
+  font-weight: bold;
+  font-size: 32px;
+  color:#474C5E;  
+  margin-bottom: 52px;  
+}
+
+.room button{
+  background: radial-gradient(50% 123.47% at 50% 50%, #00FF94 0%, #720059 100%), linear-gradient(121.28deg, #669600 0%, #FF0000 100%), linear-gradient(360deg, #0029FF 0%, #8FFF00 100%), radial-gradient(100% 164.72% at 100% 100%, #6100FF 0%, #00FF57 100%), radial-gradient(100% 148.07% at 0% 0%, #FFF500 0%, #51D500 100%);
+  background-blend-mode: screen, color-dodge, overlay, difference, normal;
+  color: #000000;
+  font-weight: 700;
+}
+
+/* Styling for the sign-out container */
+.sign-out {
+  text-align: center; /* Center the content horizontally */
+  margin-top: 20px; /* Add some space at the top */
+}
+
+/* Styling for the sign-out button */
+.sign-out button {
+  background-color: #e74c3c; /* Red background color */
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Padding for the button */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Show a pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+}
+
+.sign-out button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+
+#dp{
+  height: 92px;
+  width: 92px;
+  position: relative;
+  bottom: 370px;
+  left: 100px;
+  border-radius: 50%;
+
 }
